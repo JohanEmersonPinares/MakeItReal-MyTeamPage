@@ -1,0 +1,110 @@
+/* Estilos globales */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas en desktop */
+  gap: 20px; /* Espacio entre los elementos */
+  margin: 20px;
+}
+
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alineación a la izquierda */
+  position: relative;
+  margin: 10px;
+}
+
+.image-wrapper img {
+  width: 100%; /* Ajustar el ancho de las imágenes */
+  height: auto;
+  display: block;
+}
+
+.caption {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.vertical-text {
+  position: absolute;
+  right: -20px; /* Ajusta según el espacio necesario */
+  top: 0; /* Alinea el texto vertical con la parte superior de la imagen */
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: left bottom;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0.5;
+}
+div {
+  border: 2px solid #FF0000; /* Borde para ayuda visual */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 375px) {
+  .title h1,
+  .title h2,
+  .title p {
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+  }
+  .cabecera {
+    margin: 15% 0 7% 0;
+    padding-left: 3%;
+  }
+  .title h2 {
+    font-size: 18px;
+    margin: 5% 0 7% 0;
+    padding-left: 3%;
+  }
+  .title p {
+    padding-left: 3%;
+    padding-right: 10%;
+    font-size: 14px;
+  }
+  .container p {
+    font-size: 12px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móvil */
+    gap: 20px;
+    margin: 20px;
+  }
+
+  .image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding: 10px;
+    margin-left: 0;
+  }
+  .image-wrapper img {
+    width: 100%; /* Ajusta el ancho de las imágenes */
+  }
+  .container > .image-wrapper:nth-child(2n + 2) {
+    margin-top: 20px; /* Ajusta el margen superior de las imágenes en la segunda columna */
+  }
+  .attribution {
+    margin-top: 18%;
+    font-size: 10px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .vertical-text {
+    top: 0; /* Alinea el texto vertical con la parte superior de la imagen */
+    transform: translateY(-50%) rotate(90deg);
+    font-size: 8px;
+    right: -25px; /* Ajusta según el espacio necesario */
+  }
+}
